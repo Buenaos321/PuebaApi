@@ -17,7 +17,7 @@ class CreatePersonasTable extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('idea');
-            $table->string('documento');
+            $table->bigInteger('documento')->unique();
             $table->timestamps();
         });
     }

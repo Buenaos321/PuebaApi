@@ -35,7 +35,7 @@ class PersonaController extends Controller
         $request->validate([
             'nombre'=>'required',
             'idea'=>'required|max:255',
-            'documento'=>'required|max:11'
+            'documento'=>'required|max:11min:10'
         ]);
 
         $persona = persona::create($request->all());
